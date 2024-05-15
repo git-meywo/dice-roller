@@ -1,5 +1,7 @@
 # Welcome to the prototype for the dice rolling app 'Dice Roller', an app that allows easy and in depth die customization
 
+import random as rd
+
 current_die: list = []
 
 # This part is the beginning of the dice rolling, it lets the user select which preset they want to use
@@ -54,17 +56,27 @@ post_options: dict = {
     '3': 'post_option_3'
 }
 
-
-
-
-def post_option_1():
+def post_option_1(): # NOT FINISHED -> DO NOT USE
     return
 
 def post_option_2():
+    roll_die()
     return
 
 def post_option_3():
+    print(f'\nHere is your current die: {current_die}')
+    post_generate()
     return
+
+
+
+
+# This part rolls the current die - WIP
+def roll_die():
+    print(f'\nAnd the result is...\n{current_die[rd.randint(0, len(current_die) - 1)]}!')
+    post_roll() # DOES NOT EXIST YET
+    return
+
 
 
 
