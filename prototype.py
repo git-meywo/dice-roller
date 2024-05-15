@@ -37,23 +37,34 @@ def generate_2():
 
 
 
-# WIP - The modify part is unusable at the moment, please refrain from using it
-def ask_modify():
-    chosen_option = input('\nWould you like to modify your die?\n1: Yes / 2: No / 3: See Current Die\n')
-    if chosen_option in modify_options:
-        exec(f'{modify_options[chosen_option]}()')
+# This part lets the user select what they would like to do post generation
+def post_generate():
+    chosen_option = input('\nWhat would you like to do next?\n1: Edit my Die / 2: Roll my Die / 3: View Current Die\n')
+    if chosen_option in post_options:
+        exec(f'{post_options[chosen_option]}()')
         return
     else:
         print('\nError: Answer not recognized')
-        ask_modify()
+        post_generate()
         return
 
-modify_options: dict = {
-    '1': 'modify_option_1',
-    '2': 'modify_option_2',
-    '3': 'modify_option_3'
+post_options: dict = {
+    '1': 'post_option_1',
+    '2': 'post_option_2',
+    '3': 'post_option_3'
 }
 
+
+
+
+def post_option_1():
+    return
+
+def post_option_2():
+    return
+
+def post_option_3():
+    return
 
 
 
