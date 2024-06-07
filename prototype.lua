@@ -15,7 +15,7 @@ function Generate()
 
     if die_presets[chosen_preset] ~= nil then
         local command = die_presets[chosen_preset] .. '()'
-                load(command)()
+        load(command)()
         return
     else
         print('\nError: Answer not recognized')
